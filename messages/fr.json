@@ -1,0 +1,162 @@
+{
+
+  "Header": {
+    "brandPart1": "Amine",
+    "brandPart2": "Ouerghi",
+    "navLinks": {
+      "about": "À propos",
+      "projects": "Projets",
+      "experience": "Expérience",
+      "contact": "Contact"
+    },
+    "themeToggleAria": "Basculer le thème",
+    "menuToggleAria": "Basculer le menu",
+    "languageSwitchAria": "Changer de langue",
+    "languages": {
+      "english": "Anglais",
+      "french": "Français",
+      "arabic": "Arabe"
+    }
+  },
+
+  "Hero": {
+    "tag": "Ouvert aux stages et opportunités juniors",
+    "titlePart1": "Étudiant en Génie Informatique &",
+    "titlePart2": "Développeur Full-Stack",
+    "description": "Passionné par la conception et le développement de solutions numériques efficaces. Compétent dans les technologies frontend et backend, notamment {react}, {flutter}, {nestjs}, {dotnet}, {springboot}, {mongodb}, et {sqlserver}. Toujours prêt à apprendre, collaborer et contribuer à des projets logiciels impactants.",
+    "viewProjects": "Voir les Projets",
+    "getInTouch": "Entrer en Contact",
+    "socialLinks": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    },
+    "carrerHighlight": "Carrière",
+    "statCards": {
+      "projectsCompleted": "Projets Réalisés",
+      "internships": "Stages",
+      "techStacksMastered": "Technologies Maîtrisées",
+      "passionForLearning": "Passion pour l'Apprentissage"
+    }
+  },
+
+  "Skills": {
+    "title": "Compétences Techniques",
+    "skillCategories": {
+      "0": {
+        "category": "Backend & DevOps"
+      },
+      "1": {
+        "category": "Développement Web"
+      },
+      "2": {
+        "category": "Développement Mobile"
+      },
+      "3": {
+        "category": "Logiciels & Systèmes"
+      }
+    }
+  },
+
+  "FeaturedProjects": {
+    "title": "Projets Phares",
+    "subtitle": "Mise en avant de solutions innovantes qui génèrent des résultats concrets pour les entreprises",
+    "projects": {
+      "0": {
+        "title": "SmartFarming",
+        "description": "Une solution agricole intelligente basée sur l'IoT permettant un suivi en temps réel, un arrosage intelligent et une visualisation des données via des tableaux de bord Power BI, avec des microservices Dockerisés pour une évolutivité.",
+        "metric0": "Architecture de Microservices",
+        "metric1": "Suivi en Temps Réel",
+        "metric2": "Perspectives IA"
+      },
+      "1": {
+        "title": "Recetta AI",
+        "description": "Une application mobile qui utilise l'IA pour suggérer des recettes en fonction des ingrédients scannés ou des images alimentaires, offrant des recommandations culinaires dynamiques et intelligentes.",
+        "metric0": "Recettes Alimentées par l'IA",
+        "metric1": "Détection Intelligente des Ingrédients",
+        "metric2": "Expérience Utilisateur Fluide"
+      },
+      "2": {
+        "title": "E-Learning",
+        "description": "Une plateforme éducative basée sur Flutter intégrée avec Firebase pour l'authentification, le stockage de fichiers et la gestion des utilisateurs — conçue pour améliorer les expériences d'apprentissage à distance.",
+        "metric0": "Authentification Firebase",
+        "metric1": "Stockage Cloud",
+        "metric2": "Interface Réactive"
+      },
+      "3": {
+        "title": "3DMuseum",
+        "description": "Un musée 3D interactif développé avec Unity, offrant un environnement virtuel immersif où les utilisateurs peuvent explorer des expositions d'art numérique et des modèles 3D.",
+        "metric0": "Interaction 3D",
+        "metric1": "Design Immersif",
+        "metric2": "Construction Multiplateforme"
+      }
+    }
+  },
+
+  "Expertise": {
+    "title": "Mon Expertise",
+    "quote": "Parfois, la meilleure façon de résoudre un problème est d'aider les autres. - Oncle Iroh",
+    "expertiseAreas": {
+      "0": {
+        "title": "Développement Backend & API",
+        "description": "Conception et implémentation d'API sécurisées et évolutives avec NestJS et .NET, utilisant l'architecture Clean, CQRS, et des tests unitaires pour une haute maintenabilité."
+      },
+      "1": {
+        "title": "Développement Mobile",
+        "description": "Applications mobiles multiplateformes construites avec Flutter et la gestion d'état avec Provider et BLoC, offrant des expériences utilisateur fluides et réactives."
+      },
+      "2": {
+        "title": "Développement Web",
+        "description": "Développement d'interfaces web dynamiques et modernes avec React et Next.js, garantissant des performances élevées et une accessibilité sur tous les appareils."
+      },
+      "3": {
+        "title": "Ingénierie Logicielle & Graphismes",
+        "description": "Expérience avec C++ et OpenGL pour construire des éditeurs graphiques interactifs utilisant ECS (EnTT) et ImGUI pour des workflows de conception modulaires et visuels."
+      },
+      "4": {
+        "title": "DevOps & Infrastructure Cloud",
+        "description": "Conteneurisation et orchestration avec Docker et Kubernetes, suivi avec Prometheus et Grafana, et déploiement d'architectures de microservices."
+      }
+    }
+  },
+
+  "Experience": {
+    "title": "Expérience Professionnelle",
+    "jobs": {
+      "0": {
+        "title": "Stagiaire Développeur Full-Stack",
+        "description": "Développé une application mobile multiplateforme utilisant Flutter et un backend .NET MVC. Axé sur la création d'interfaces utilisateur fluides et réactives, intégré une authentification sécurisée basée sur JWT, et mis en œuvre des tests unitaires pour renforcer la qualité du code."
+      },
+      "1": {
+        "title": "Développeur Logiciel (Temps Partiel)",
+        "description": "Conçu un éditeur graphique basé sur C++ et OpenGL, similaire à un moteur de jeu léger. Implémenté une architecture Entity-Component-System (ECS) avec la bibliothèque EnTT et développé l'interface utilisateur avec ImGUI pour une édition modulaire de scènes."
+      },
+      "2": {
+        "title": "Stagiaire Développeur Backend",
+        "description": "Conçu et implémenté un système backend utilisant .NET avec l'architecture Clean et le pattern CQRS via MediatR. Développé des tests unitaires avec xUnit pour garantir la fiabilité et la maintenabilité des services principaux."
+      },
+      "3": {
+        "title": "Stagiaire Développeur Mobile",
+        "description": "Démarré mon parcours en développement Flutter en apprenant les bases du framework et en construisant des interfaces mobiles avec des widgets Stateful et Stateless. Intégré Firebase pour l'authentification et les téléchargements de fichiers."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Travaillons Ensemble",
+    "subtitle": "Disponible pour des opportunités de freelance sélectionnées. Un projet excitant ?",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "responseTime": "Temps de Réponse",
+    "responseMessage": "Je réponds généralement dans les 24 heures",
+    "formName": "Votre Nom",
+    "formEmail": "Votre Email",
+    "formMessage": "Votre Message",
+    "formSubmit": "Envoyer le Message"
+  },
+
+  "Footer": {
+    "copyright": "© Mohamed Amine Ouerghi. Tous droits réservés.",
+    "builtWith": "Construit avec Next.js, React et Tailwind CSS"
+  }
+}

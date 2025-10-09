@@ -1,0 +1,161 @@
+{
+  
+  "Header": {
+    "brandPart1": "Amine",
+    "brandPart2": "Ouerghi",
+    "navLinks": {
+      "about": "About",
+      "projects": "Projects",
+      "experience": "Experience",
+      "contact": "Contact"
+    },
+    "themeToggleAria": "Toggle theme",
+    "menuToggleAria": "Toggle menu",
+    "languageSwitchAria": "Switch language",
+    "languages": {
+      "english": "English",
+      "french": "French",
+      "arabic": "Arabic"
+    }
+  },
+
+  "Hero": {
+    "tag": "Open to internship & junior opportunities",
+    "titlePart1": "Computer Engineering Student &",
+    "titlePart2": "Full-Stack Developer",
+    "description": "Passionate about designing and developing efficient digital solutions. Skilled in both frontend and backend technologies including {react}, {flutter}, {nestjs}, {dotnet}, {springboot}, {mongodb}, and {sqlserver}. Always eager to learn, collaborate, and contribute to impactful software projects.",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get in Touch",
+    "socialLinks": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    },
+    "carrerHighlight": "Career Highlights",
+    "statCards": {
+      "projectsCompleted": "Projects Completed",
+      "internships": "Internships",
+      "techStacksMastered": "Tech Stacks Mastered",
+      "passionForLearning": "Passion for Learning"
+    }
+  },
+  "Skills": {
+    "title": "Technical Skills",
+    "skillCategories": {
+      "0": {
+        "category": "Backend & DevOps"
+      },
+      "1": {
+        "category": "Web Development"
+      },
+      "2": {
+        "category": "Mobile Development"
+      },
+      "3": {
+        "category": "Software & Systems"
+      }
+    }
+  },
+
+  "FeaturedProjects": {
+    "title": "Featured Projects",
+    "subtitle": "Showcasing innovative solutions that drive real business results",
+    "projects": {
+      "0": {
+        "title": "SmartFarming System",
+        "description": "An IoT-based smart agriculture solution enabling real-time monitoring, intelligent irrigation, and data visualization using Power BI dashboards, with Dockerized microservices for scalability.",
+        "metric0": "Microservice Architecture",
+        "metric1": "Real-time Monitoring",
+        "metric2": "AI Insights"
+      },
+      "1": {
+        "title": "Recetta AI App",
+        "description": "A mobile application that leverages AI to suggest recipes based on scanned ingredients or food images, providing dynamic and intelligent culinary recommendations.",
+        "metric0": "AI-Powered Recipes",
+        "metric1": "Smart Ingredient Detection",
+        "metric2": "Seamless UX"
+      },
+      "2": {
+        "title": "E-Learning App",
+        "description": "A Flutter-based educational platform integrated with Firebase for authentication, file storage, and user management — designed to enhance remote learning experiences.",
+        "metric0": "Firebase Auth",
+        "metric1": "Cloud Storage",
+        "metric2": "Responsive UI"
+      },
+      "3": {
+        "title": "3DMuseum Experience",
+        "description": "An interactive 3D museum developed with Unity, offering an immersive virtual environment where users can explore digital art exhibits and 3D models.",
+        "metric0": "3D Interaction",
+        "metric1": "Immersive Design",
+        "metric2": "Cross-Platform Build"
+      }
+    }
+  },
+
+  "Expertise": {
+    "title": "My Expertise",
+    "quote": "Sometimes the best way to solve a problem is to help others. - Uncle Iroh",
+    "expertiseAreas": {
+      "0": {
+        "title": "Backend & API Development",
+        "description": "Design and implementation of secure, scalable APIs using NestJS and .NET with Clean Architecture, CQRS, and unit testing for high maintainability."
+      },
+      "1": {
+        "title": "Mobile Development",
+        "description": "Cross-platform mobile applications built with Flutter and state management using Provider and BLoC, delivering fluid and responsive user experiences."
+      },
+      "2": {
+        "title": "Web Development",
+        "description": "Development of dynamic and modern web interfaces with React and Next.js, ensuring high performance and accessibility across devices."
+      },
+      "3": {
+        "title": "Software Engineering & Graphics",
+        "description": "Experience with C++ and OpenGL to build interactive graphical editors using ECS (EnTT) and ImGUI for modular and visual design workflows."
+      },
+      "4": {
+        "title": "DevOps & Cloud Infrastructure",
+        "description": "Containerization and orchestration with Docker and Kubernetes, monitoring with Prometheus and Grafana, and deployment of microservices architectures."
+      }
+    }
+  },
+  
+  "Experience": {
+    "title": "Professional Experience",
+    "jobs": {
+      "0": {
+        "title": "Full-Stack Developer Intern",
+        "description": "Developed a cross-platform mobile application using Flutter and a .NET MVC backend. Focused on creating smooth and reactive UIs, integrated secure JWT-based authentication, and implemented unit tests to strengthen code quality."
+      },
+      "1": {
+        "title": "Software Developer (Part-Time)",
+        "description": "Built a C++ and OpenGL-based graphical editor similar to a lightweight game engine. Implemented an Entity-Component-System (ECS) architecture using the EnTT library and developed the UI with ImGUI for modular scene editing."
+      },
+      "2": {
+        "title": "Backend Developer Intern",
+        "description": "Designed and implemented a backend system using .NET with Clean Architecture and the CQRS pattern through MediatR. Developed unit tests with xUnit to ensure reliability and maintainability of core services."
+      },
+      "3": {
+        "title": "Mobile Developer Intern",
+        "description": "Started my journey in Flutter development by learning the fundamentals of the framework and building mobile interfaces using Stateful and Stateless widgets. Integrated Firebase for authentication and file uploads."
+      }
+    }
+  },
+
+  "Contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Available for select freelance opportunities. Have an exciting project?",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "responseTime": "Response Time",
+    "responseMessage": "I typically respond within 24 hours",
+    "formName": "Your Name",
+    "formEmail": "Your Email",
+    "formMessage": "Your Message",
+    "formSubmit": "Send Message"
+  },
+  "Footer": {
+    "copyright": "© Mohamed Amine Ouerghi. All rights reserved.",
+    "builtWith": "Built with Next.js, React, and Tailwind CSS"
+  }
+}
