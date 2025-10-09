@@ -1,4 +1,4 @@
-import { Calendar, ExternalLink, MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
 export const Experience = () => {

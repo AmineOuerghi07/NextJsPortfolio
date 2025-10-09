@@ -2,6 +2,7 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import toast from 'react-hot-toast';
 
 export const Contact = () => {
   const t = useTranslations('Contact');
@@ -11,16 +12,36 @@ export const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (formData.name && formData.email && formData.message) {
-      alert(t('thankYouMessage'));
-      setFormData({ name: '', email: '', message: '' });
-    } else {
-      alert(t('fillAllFields'));
+
+    if (!formData.name || !formData.email || !formData.message) {
+      toast.error(t('fillAllFields'));
+      return;
+    }
+
+    const loadingToast = toast.loading('Sending message...');
+
+    try {
+      const res = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      toast.dismiss(loadingToast);
+
+      if (res.ok) {
+        toast.success(t('thankYouMessage'));
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast.error('Something went wrong. Please try again.');
+      }
+    } catch {
+      toast.dismiss(loadingToast);
+      toast.error('Failed to send message. Please check your connection.');
     }
   };
-
   return (
     <section
       id="contact"

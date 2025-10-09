@@ -1,10 +1,9 @@
 import { useTheme } from "@/context/ThemeContext";
-import { ArrowUpRight, Menu, Moon, Sun, X, Globe } from "lucide-react";
+import { Menu, Moon, Sun, X, Globe } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import { useTransition } from 'react';
-import { routing } from "@/i18n/routing";
 
 export const Header = () => {
   const { isDark, toggleTheme } = useTheme();
@@ -91,10 +90,11 @@ return (
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
-          <a 
-            href="#" 
+          <a
+            key="#hero" 
+            href="#hero" 
             className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white transition-transform hover:scale-105"
-            onClick={(e) => handleNavClick(e, '#')}
+            onClick={(e) => handleNavClick(e, '#hero')}
           >
             {t('brandPart1')}<span className="text-blue-600 dark:text-blue-400">{t('brandPart2')}</span>
           </a>

@@ -23,7 +23,7 @@
     "tag": "Open to internship & junior opportunities",
     "titlePart1": "Computer Engineering Student &",
     "titlePart2": "Full-Stack Developer",
-    "description": "Passionate about designing and developing efficient digital solutions. Skilled in both frontend and backend technologies including {react}, {flutter}, {nestjs}, {dotnet}, {springboot}, {mongodb}, and {sqlserver}. Always eager to learn, collaborate, and contribute to impactful software projects.",
+    "description": "Passionate about crafting smart and efficient digital solutions. Skilled in both frontend and backend technologies including {react}, {flutter}, {nestjs}, {dotnet}, {springboot}, {mongodb}, and {sqlserver}. As a curious learner and aspiring developer, I’m constantly building new projects — you can explore many of them on my GitHub.",
     "viewProjects": "View Projects",
     "getInTouch": "Get in Touch",
     "socialLinks": {
@@ -152,7 +152,8 @@
     "formName": "Your Name",
     "formEmail": "Your Email",
     "formMessage": "Your Message",
-    "formSubmit": "Send Message"
+    "formSubmit": "Send Message",
+    "thankYouMessage": "Thank you for reaching out! I'll get back to you soon."
   },
   "Footer": {
     "copyright": "© Mohamed Amine Ouerghi. All rights reserved.",

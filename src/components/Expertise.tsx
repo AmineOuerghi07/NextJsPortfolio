@@ -1,4 +1,4 @@
-import { BarChart, Code, Cpu, Layout, Server, Smartphone } from "lucide-react";
+import { Code, Cpu, Layout, Server, Smartphone } from "lucide-react";
 import { useTranslations } from 'next-intl';
 
 export const Expertise = () => {
@@ -38,7 +38,7 @@ export const Expertise = () => {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t('title')}</h2>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            "{t('quote')}"
+            &ldquo;{t('quote')}&rdquo;
           </p>
         </div>
         

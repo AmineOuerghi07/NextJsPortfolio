@@ -23,7 +23,7 @@
     "tag": "Ouvert aux stages et opportunités juniors",
     "titlePart1": "Étudiant en Génie Informatique &",
     "titlePart2": "Développeur Full-Stack",
-    "description": "Passionné par la conception et le développement de solutions numériques efficaces. Compétent dans les technologies frontend et backend, notamment {react}, {flutter}, {nestjs}, {dotnet}, {springboot}, {mongodb}, et {sqlserver}. Toujours prêt à apprendre, collaborer et contribuer à des projets logiciels impactants.",
+    "description": "Passionné par la création de solutions numériques intelligentes et efficaces. Compétent à la fois en frontend et backend, notamment avec {react}, {flutter}, {nestjs}, {dotnet}, {springboot}, {mongodb} et {sqlserver}. En tant qu’étudiant curieux et développeur en devenir, je réalise régulièrement de nouveaux projets — plusieurs sont disponibles sur mon GitHub.",
     "viewProjects": "Voir les Projets",
     "getInTouch": "Entrer en Contact",
     "socialLinks": {
@@ -152,7 +152,8 @@
     "formName": "Votre Nom",
     "formEmail": "Votre Email",
     "formMessage": "Votre Message",
-    "formSubmit": "Envoyer le Message"
+    "formSubmit": "Envoyer le Message",
+    "thankYouMessage": "Merci de m'avoir contacté ! Je vous répondrai bientôt."
   },
 
   "Footer": {
