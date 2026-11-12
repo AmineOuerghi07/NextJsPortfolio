@@ -44,8 +44,8 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   // Show loader until mounted and delay is over
   if (!isMounted || !isReady) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-200 dark:bg-gray-800">
-        <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+      <div className="flex min-h-screen items-center justify-center bg-white dark:bg-stone-950">
+        <div className="h-10 w-10 animate-spin rounded-full border-2 border-stone-300 border-t-amber-800 dark:border-stone-700 dark:border-t-amber-400"></div>
       </div>
     );
   }

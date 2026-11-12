@@ -1,36 +1,36 @@
 import { useTheme } from "@/context/ThemeContext";
 import { Menu, Moon, Sun, X, Globe } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { useLocale, useTranslations } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
-import { useTransition } from 'react';
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter, usePathname } from "next/navigation";
+import { useTransition } from "react";
 
 export const Header = () => {
   const { isDark, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const t = useTranslations('Header');
+  const t = useTranslations("Header");
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
-  const currentLocale = useLocale(); // Get current locale from next-intl
-  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false); // Desktop hover state
+  const currentLocale = useLocale();
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const [isMobileLanguageMenuOpen, setIsMobileLanguageMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { href: '#about', label: t('navLinks.about') },
-    { href: '#projects', label: t('navLinks.projects') },
-    { href: '#experience', label: t('navLinks.experience') },
-    { href: '#contact', label: t('navLinks.contact') }
+    { href: "#about", label: t("navLinks.about") },
+    { href: "#projects", label: t("navLinks.projects") },
+    { href: "#skills", label: t("navLinks.skills") },
+    { href: "#experience", label: t("navLinks.experience") },
+    { href: "#contact", label: t("navLinks.contact") },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
@@ -41,103 +41,96 @@ export const Header = () => {
       const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
 
   const switchLanguage = (newLocale: string) => {
-  startTransition(() => {
-    // Extract the path without the current locale prefix
-    const currentPathWithoutLocale = pathname.startsWith(`/${currentLocale}`)
-      ? pathname.slice(currentLocale.length + 1) || '/'  // Remove '/en' and keep the rest (e.g., '/' or '/#about')
-      : pathname;
+    startTransition(() => {
+      const currentPathWithoutLocale = pathname.startsWith(`/${currentLocale}`)
+        ? pathname.slice(currentLocale.length + 1) || "/"
+        : pathname;
 
-    // Build the new path with the new locale
-    const newPath = `/${newLocale}${currentPathWithoutLocale === '/' ? '' : currentPathWithoutLocale}`;
+      const newPath = `/${newLocale}${currentPathWithoutLocale === "/" ? "" : currentPathWithoutLocale}`;
 
-    router.push(newPath);
-    setIsLanguageDropdownOpen(false); // Close desktop dropdown
-    setIsMobileLanguageMenuOpen(false); // Close mobile menu
-  });
-};
+      router.push(newPath);
+      setIsLanguageDropdownOpen(false);
+      setIsMobileLanguageMenuOpen(false);
+    });
+  };
 
-const getLanguageName = (locale: string) => {
+  const getLanguageName = (locale: string) => {
     const langMap: Record<string, string> = {
-      en: 'english',
-      fr: 'french',
-      ar: 'arabic',
+      en: "english",
+      fr: "french",
+      ar: "arabic",
     };
-    const langKey = langMap[locale] || 'english'; // Default to 'english' if unknown
+    const langKey = langMap[locale] || "english";
     return t(`languages.${langKey}`);
   };
 
-// Handle dropdown close with delay
   const handleMouseLeave = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => setIsLanguageDropdownOpen(false), 200); // 200ms delay
+    timeoutRef.current = setTimeout(() => setIsLanguageDropdownOpen(false), 200);
   };
 
-  // Clear timeout on mouse enter
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setIsLanguageDropdownOpen(true);
   };
-return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg' 
-        : 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm'
-    }`}>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20">
+
+  const iconButtonClass =
+    "rounded-full border border-stone-300 p-2 text-stone-700 transition-colors hover:border-amber-700 hover:text-amber-800 dark:border-stone-700 dark:text-stone-300 dark:hover:border-amber-400 dark:hover:text-amber-400";
+
+  return (
+    <header
+      className={`fixed top-0 z-50 w-full border-b backdrop-blur-md transition-colors lg:hidden ${
+        scrolled
+          ? "border-stone-200 bg-white/95 dark:border-stone-800 dark:bg-stone-950/95"
+          : "border-stone-200/70 bg-white/80 dark:border-transparent dark:bg-stone-950/80"
+      }`}
+    >
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between sm:h-20">
           <a
-            key="#hero" 
-            href="#hero" 
-            className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white transition-transform hover:scale-105"
-            onClick={(e) => handleNavClick(e, '#hero')}
+            href="#hero"
+            className="text-lg font-semibold tracking-tight text-stone-950 sm:text-xl dark:text-stone-50"
+            onClick={(e) => handleNavClick(e, "#hero")}
           >
-            {t('brandPart1')}<span className="text-blue-600 dark:text-blue-400">{t('brandPart2')}</span>
+            {t("brandPart1")}
+            <span className="text-amber-800 dark:text-amber-400">{t("brandPart2")}</span>
           </a>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
-            {navLinks.map(link => (
-              <a 
-                key={link.href} 
-                href={link.href} 
+
+          <div className="hidden items-center gap-1 md:flex lg:gap-2">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="px-3 lg:px-4 py-2 text-sm lg:text-base text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+                className="rounded-full px-3 py-2 text-sm text-stone-700 transition-colors hover:bg-stone-200/70 hover:text-stone-950 lg:px-4 lg:text-base dark:text-stone-300 dark:hover:bg-stone-800 dark:hover:text-stone-50"
               >
                 {link.label}
               </a>
             ))}
-            <button
-              onClick={toggleTheme}
-              className="p-2 ml-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
-              aria-label={t('themeToggleAria')}
-            >
-              {isDark ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-gray-700" />}
+            <button onClick={toggleTheme} className={`${iconButtonClass} ms-2`} aria-label={t("themeToggleAria")}>
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
-            <div 
+            <div
               ref={dropdownRef}
               className="relative"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <button
-                className="p-2 ml-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
-                aria-label={t('languageSwitchAria')}
-                disabled={isPending}
-              >
-                <Globe size={20} className="text-gray-700 dark:text-gray-300" />
+              <button className={iconButtonClass} aria-label={t("languageSwitchAria")} disabled={isPending}>
+                <Globe size={18} />
               </button>
               {isLanguageDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-10">
-                  {['english', 'french', 'arabic'].map((lang) => (
+                <div className="absolute end-0 z-10 mt-2 w-40 rounded-xl border border-stone-200 bg-white py-1 shadow-sm dark:border-stone-700 dark:bg-stone-900">
+                  {["english", "french", "arabic"].map((lang) => (
                     <button
                       key={lang}
-                      onClick={() => switchLanguage(lang === 'english' ? 'en' : lang === 'french' ? 'fr' : 'ar')}
-                      className="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+                      onClick={() => switchLanguage(lang === "english" ? "en" : lang === "french" ? "fr" : "ar")}
+                      className="block w-full px-4 py-2 text-start text-sm text-stone-700 transition-colors hover:bg-stone-100 dark:text-stone-300 dark:hover:bg-stone-800"
                     >
                       {t(`languages.${lang}`)}
                     </button>
@@ -147,52 +140,47 @@ return (
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800"
-              aria-label={t('themeToggleAria')}
-            >
-              {isDark ? <Sun size={18} className="text-yellow-400" /> : <Moon size={18} className="text-gray-700" />}
+          <div className="flex items-center gap-2 md:hidden">
+            <button onClick={toggleTheme} className={iconButtonClass} aria-label={t("themeToggleAria")}>
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
-            <button 
-              className="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            <button
+              className={iconButtonClass}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={t('menuToggleAria')}
+              aria-label={t("menuToggleAria")}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-2 border-t border-gray-200 dark:border-gray-800">
-            {navLinks.map(link => (
-              <a 
+          <div className="space-y-1 border-t border-stone-200 py-4 md:hidden dark:border-stone-800">
+            {navLinks.map((link) => (
+              <a
                 key={link.href}
-                href={link.href} 
+                href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                className="block rounded-lg px-3 py-2 text-stone-700 transition-colors hover:bg-stone-200/70 dark:text-stone-300 dark:hover:bg-stone-800"
               >
                 {link.label}
               </a>
             ))}
             <button
               onClick={() => setIsMobileLanguageMenuOpen(!isMobileLanguageMenuOpen)}
-              className="block w-full px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-              aria-label={t('languageSwitchAria')}
+              className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-start text-stone-700 transition-colors hover:bg-stone-200/70 dark:text-stone-300 dark:hover:bg-stone-800"
+              aria-label={t("languageSwitchAria")}
             >
-              <Globe size={24} className="inline mr-2 text-gray-700 dark:text-gray-300" /> {getLanguageName(currentLocale)}
+              <Globe size={18} />
+              {getLanguageName(currentLocale)}
             </button>
             {isMobileLanguageMenuOpen && (
-              <div className="pl-4 space-y-1">
-                {['english', 'french', 'arabic'].map((lang) => (
+              <div className="space-y-1 ps-4">
+                {["english", "french", "arabic"].map((lang) => (
                   <button
                     key={lang}
-                    onClick={() => switchLanguage(lang === 'english' ? 'en' : lang === 'french' ? 'fr' : 'ar')}
-                    className="block w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+                    onClick={() => switchLanguage(lang === "english" ? "en" : lang === "french" ? "fr" : "ar")}
+                    className="block w-full rounded-lg px-3 py-2 text-start text-sm text-stone-700 transition-colors hover:bg-stone-200/70 dark:text-stone-300 dark:hover:bg-stone-800"
                   >
                     {t(`languages.${lang}`)}
                   </button>

@@ -1,112 +1,137 @@
-import { ChevronRight, Github } from "lucide-react";
-import { useTranslations } from 'next-intl';
+import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { SectionHeading } from "@/components/SectionHeading";
+
+type LinkKey = "product" | "appStore" | "github" | "backend" | "mobile" | "web";
+
+type Project = {
+  id: string;
+  tech: string[];
+  links: { href: string; label: LinkKey }[];
+};
+
+const projects: Project[] = [
+  {
+    id: "0",
+    tech: ["NestJS", "MongoDB", "BullMQ", "Redis", "Angular", "Capacitor"],
+    links: [
+      { href: "https://seekmake.com", label: "product" },
+      { href: "https://apps.apple.com/us/app/seekmake-one/id6759160870", label: "appStore" },
+    ],
+  },
+  {
+    id: "1",
+    tech: ["C++17/20", "OpenGL", "GLSL", "ImGui", "ECS", "Premake"],
+    links: [{ href: "https://github.com/AmineOuerghi07/OpenGL_Project", label: "github" }],
+  },
+  {
+    id: "2",
+    tech: ["NestJS", "Flutter", "Kubernetes", "MongoDB", "MQTT"],
+    links: [
+      { href: "https://github.com/AmineOuerghi07/smart_farming_backend", label: "backend" },
+      { href: "https://github.com/AmineOuerghi07/DreamCraftPim", label: "mobile" },
+      { href: "https://github.com/AmineOuerghi07/smart-farming-web", label: "web" },
+    ],
+  },
+  {
+    id: "3",
+    tech: ["C#", ".NET", "EF Core", "SQL Server", "CQRS", "xUnit"],
+    links: [{ href: "https://github.com/AmineOuerghi07/.NET_Project", label: "github" }],
+  },
+  {
+    id: "4",
+    tech: ["NestJS", "MongoDB", "Gemini API", "JWT"],
+    links: [{ href: "https://github.com/AmineOuerghi07/Recetta_Backend", label: "github" }],
+  },
+];
+
+const earlier = [
+  { id: "0", href: "https://github.com/AmineOuerghi07/Flutter-E-learning-App" },
+  { id: "1", href: "https://github.com/AmineOuerghi07/3DMusuem" },
+];
 
 export const FeaturedProjects = () => {
-  const t = useTranslations('FeaturedProjects');
-
-  const projects = [
-    {
-      title: "0",
-      description: "0",
-      tech: [
-        "NestJS",
-        "Flutter",
-        "React",
-        "MongoDB",
-        "RabbitMQ",
-        "Kubernetes",
-        "Grafana",
-        "Prometheus",
-        "Power BI",
-        "Microservices"
-      ],
-      gradient: "from-emerald-600 to-teal-700",
-      metrics: "0",
-      github: "https://github.com/AmineOuerghi07/smart_farming_backend"
-    },
-    {
-      title: "1",
-      description: "1",
-      tech: ["Flutter", "NestJS", "MongoDB", "Gemini API", "Provider"],
-      gradient: "from-amber-600 to-orange-700",
-      metrics: "1",
-      github: "https://github.com/AmineOuerghi07/Recetta_Backend"
-    },
-    {
-      title: "2",
-      description: "2",
-      tech: ["Flutter", "Firebase", "Dart", "Firestore", "Storage"],
-      gradient: "from-indigo-600 to-blue-700",
-      metrics: "2",
-      github: "https://github.com/AmineOuerghi07/Flutter-E-learning-App"
-    },
-    {
-      title: "3",
-      description: "3",
-      tech: ["Unity", "C#"],
-      gradient: "from-violet-700 to-purple-800",
-      metrics: "3",
-      github: "https://github.com/AmineOuerghi07/3DMusuem/tree/V0.1"
-    }
-  ];
+  const t = useTranslations("FeaturedProjects");
 
   return (
-    <section id="projects" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">{t('title')}</h2>
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
-            {t('subtitle')}
-          </p>
-        </div>
+    <section id="projects" className="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20 lg:scroll-mt-10 lg:px-10 lg:py-20">
+      <SectionHeading index="02" label={t("label")} title={t("title")} />
+      <p className="mt-3 max-w-2xl text-base text-stone-600 dark:text-stone-400">{t("subtitle")}</p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {projects.map((project, idx) => (
-            <div
-              key={idx}
-              className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-            >
-              <div
-                className={`h-48 sm:h-56 bg-gradient-to-br ${project.gradient} 
-  flex items-center justify-center text-white text-2xl sm:text-3xl font-bold relative overflow-hidden transition-all duration-300`}>
-                <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors duration-300"></div>
-                <span className="relative z-10">{t(`projects.${project.title}.title`).split(' ')[0]}</span>
-              </div>
-              <div className="p-6">
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">{t(`projects.${project.description}.description`)}</p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((t, i) => (
-                    <span key={i} className="text-xs sm:text-sm bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full font-medium">
-                      {t}
-                    </span>
+      <ul className="project-list mt-8 border-t border-stone-200 dark:border-stone-800">
+        {projects.map((project, index) => (
+          <li key={project.id} className="project-row border-b border-stone-200 transition-opacity dark:border-stone-800">
+            <article className="grid gap-3 py-7 sm:grid-cols-[3.5rem_minmax(0,1fr)] sm:gap-6">
+              <p className="font-mono text-sm text-amber-800 dark:text-amber-400">
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              <div>
+                <p className="text-xs font-medium uppercase tracking-[0.16em] text-stone-500">
+                  {t(`projects.${project.id}.kicker`)}
+                </p>
+                <h3 className="mt-1 text-xl font-semibold tracking-tight text-stone-950 dark:text-stone-50">
+                  {t(`projects.${project.id}.title`)}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-stone-700 dark:text-stone-300">
+                  {t(`projects.${project.id}.description`)}
+                </p>
+                <p className="mt-3 text-sm text-stone-800 dark:text-stone-200">
+                  {t(`projects.${project.id}.metric0`)}
+                </p>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {project.tech.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-full border border-stone-200 bg-stone-50 px-2.5 py-1 font-mono text-xs text-stone-700 dark:border-stone-700 dark:bg-transparent dark:text-stone-300"
+                    >
+                      {item}
+                    </li>
                   ))}
-                </div>
-
-                <div className="border-t border-gray-200 dark:border-gray-700 pt-4 space-y-2">
-                  {['metric0', 'metric1', 'metric2'].map((metricKey, i) => (
-                    <div key={i} className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-2">
-                      <ChevronRight size={16} className="text-blue-600 dark:text-blue-400" />
-                      {t(`projects.${project.metrics}.${metricKey}`)}
-                    </div>
-                  ))}
-
-                  {/* GitHub link */}
-                  {project.github && (
+                </ul>
+                <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+                  {project.links.map((link) => (
                     <a
-                      href={project.github}
+                      key={link.href}
+                      href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 mt-2 hover:text-blue-600 dark:hover:text-blue-400"
+                      className="group/link inline-flex items-center gap-1 text-sm font-medium text-amber-800 hover:underline dark:text-amber-400"
                     >
-                      <Github size={16} /> View on GitHub
+                      {t(`links.${link.label}`)}
+                      <ArrowUpRight
+                        size={15}
+                        className="transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 rtl:group-hover/link:-translate-x-0.5"
+                      />
                     </a>
-                  )}
+                  ))}
                 </div>
               </div>
-            </div>
+            </article>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-10">
+        <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-stone-500">{t("earlierLabel")}</h3>
+        <ul className="mt-3 divide-y divide-stone-200 border-y border-stone-200 dark:divide-stone-800 dark:border-stone-800">
+          {earlier.map((item) => (
+            <li key={item.id} className="flex flex-col gap-2 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="font-medium text-stone-950 dark:text-stone-50">{t(`earlier.${item.id}.title`)}</p>
+                <p className="mt-1 text-sm text-stone-600 dark:text-stone-400">{t(`earlier.${item.id}.description`)}</p>
+              </div>
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-amber-800 hover:underline dark:text-amber-400"
+              >
+                {t("links.github")}
+                <ArrowUpRight size={15} />
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
