@@ -80,7 +80,7 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-stone-100 text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100">
+      <body className="bg-white text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100">
       <ThemeProvider>
 
       <LocaleProvider initialLocale={currentLocale.locale} initialMessages={messages}>

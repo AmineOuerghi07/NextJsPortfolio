@@ -11,7 +11,7 @@ import { Skills } from "@/components/Skills";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-stone-100 text-stone-900 transition-colors duration-300 dark:bg-stone-950 dark:text-stone-100">
+    <div className="min-h-screen bg-white text-stone-900 transition-colors duration-300 dark:bg-stone-950 dark:text-stone-100">
       <Header />
       <div className="lg:mx-auto lg:grid lg:min-h-screen lg:max-w-[1240px] lg:grid-cols-[240px_minmax(0,1fr)]">
         <SideNav />

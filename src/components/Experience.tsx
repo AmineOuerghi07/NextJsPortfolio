@@ -59,7 +59,7 @@ export const Experience = () => {
       <SectionHeading index="04" label={t("label")} title={t("title")} />
 
       <div className="mt-10 grid gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-8">
-        <div role="tablist" aria-orientation="vertical" className="flex gap-2 overflow-x-auto md:flex-col md:overflow-visible">
+        <div role="tablist" aria-orientation="vertical" className="no-scrollbar flex gap-2 overflow-x-auto md:flex-col md:overflow-visible">
           {jobs.map((job, index) => {
             const selected = job.id === active.id;
             return (
@@ -75,8 +75,8 @@ export const Experience = () => {
                 onKeyDown={(event) => onTabKeyDown(event, index)}
                 className={`shrink-0 rounded-md border-b-2 border-transparent px-3 py-2 text-start md:border-b-0 md:border-s-2 ${
                   selected
-                    ? "border-amber-700 bg-amber-800/10 text-stone-950 dark:border-amber-400 dark:bg-amber-400/10 dark:text-stone-50"
-                    : "text-stone-500 hover:bg-stone-200/70 dark:hover:bg-stone-800"
+                    ? "border-amber-700 bg-amber-50 text-stone-950 dark:border-amber-400 dark:bg-amber-400/10 dark:text-stone-50"
+                    : "text-stone-600 hover:bg-stone-100 dark:text-stone-500 dark:hover:bg-stone-800"
                 }`}
               >
                 <span className="block text-sm font-medium">{job.company}</span>
@@ -135,7 +135,7 @@ export const Experience = () => {
               {active.tech.map((item) => (
                 <li
                   key={item}
-                  className="rounded-full border border-stone-200 px-2.5 py-1 font-mono text-xs text-stone-600 dark:border-stone-700 dark:text-stone-300"
+                  className="rounded-full border border-stone-200 bg-stone-50 px-2.5 py-1 font-mono text-xs text-stone-700 dark:border-stone-700 dark:bg-transparent dark:text-stone-300"
                 >
                   {item}
                 </li>

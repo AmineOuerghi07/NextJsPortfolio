@@ -11,6 +11,15 @@ body {
   font-family: var(--font-sans);
 }
 
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .project-list:hover > .project-row,
 .project-list:focus-within > .project-row {
   opacity: 0.42;

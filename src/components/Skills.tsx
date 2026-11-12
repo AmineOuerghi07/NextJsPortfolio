@@ -49,7 +49,7 @@ export const Skills = () => {
               {cat.skills.map((skill) => (
                 <li
                   key={skill}
-                  className="rounded-full border border-stone-200 px-3 py-1.5 text-sm text-stone-700 dark:border-stone-700 dark:text-stone-300"
+                  className="rounded-full border border-stone-200 bg-stone-50 px-3 py-1.5 text-sm text-stone-800 dark:border-stone-700 dark:bg-transparent dark:text-stone-300"
                 >
                   {skill}
                 </li>

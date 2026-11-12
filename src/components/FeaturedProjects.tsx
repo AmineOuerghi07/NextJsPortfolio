@@ -72,7 +72,7 @@ export const FeaturedProjects = () => {
                 <h3 className="mt-1 text-xl font-semibold tracking-tight text-stone-950 dark:text-stone-50">
                   {t(`projects.${project.id}.title`)}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-300">
+                <p className="mt-2 text-sm leading-relaxed text-stone-700 dark:text-stone-300">
                   {t(`projects.${project.id}.description`)}
                 </p>
                 <p className="mt-3 text-sm text-stone-800 dark:text-stone-200">
@@ -82,7 +82,7 @@ export const FeaturedProjects = () => {
                   {project.tech.map((item) => (
                     <li
                       key={item}
-                      className="rounded-full border border-stone-200 px-2.5 py-1 font-mono text-xs text-stone-600 dark:border-stone-700 dark:text-stone-300"
+                      className="rounded-full border border-stone-200 bg-stone-50 px-2.5 py-1 font-mono text-xs text-stone-700 dark:border-stone-700 dark:bg-transparent dark:text-stone-300"
                     >
                       {item}
                     </li>

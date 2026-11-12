@@ -29,7 +29,7 @@ export const Hero = () => {
           <p className="mt-3 text-lg font-medium text-amber-800 sm:text-xl dark:text-amber-400">
             {t("title")}
           </p>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone-600 sm:text-lg dark:text-stone-300">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone-700 sm:text-lg dark:text-stone-300">
             {t("description")}
           </p>
           <p className="mt-4 text-sm text-stone-700 dark:text-stone-300">
@@ -41,7 +41,7 @@ export const Hero = () => {
             <a
               href="#projects"
               onClick={(e) => handleNavClick(e, "#projects")}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-800 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-amber-900 dark:bg-amber-500 dark:text-stone-950 dark:hover:bg-amber-400"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-stone-800 dark:bg-amber-500 dark:text-stone-950 dark:hover:bg-amber-400"
             >
               {t("viewProjects")}
               <ChevronRight size={18} />
@@ -49,7 +49,7 @@ export const Hero = () => {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 px-6 py-3 text-sm font-medium text-stone-900 transition-colors hover:border-amber-700 dark:border-stone-700 dark:text-stone-100 dark:hover:border-amber-400"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-medium text-stone-900 transition-colors hover:border-stone-950 dark:border-stone-700 dark:bg-transparent dark:text-stone-100 dark:hover:border-amber-400"
             >
               {t("getInTouch")}
             </a>
@@ -67,7 +67,7 @@ export const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-colors hover:border-amber-700 hover:text-amber-800 dark:border-stone-700 dark:text-stone-300 dark:hover:border-amber-400 dark:hover:text-amber-400"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-300 bg-white text-stone-800 transition-colors hover:border-stone-950 dark:border-stone-700 dark:bg-transparent dark:text-stone-300 dark:hover:border-amber-400 dark:hover:text-amber-400"
               >
                 <Icon size={18} />
               </a>
@@ -75,7 +75,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <aside className="rounded-2xl border border-stone-200 bg-white p-6 sm:p-8 dark:border-stone-800 dark:bg-stone-900">
+        <aside className="rounded-2xl border border-stone-200 bg-stone-50 p-6 shadow-sm sm:p-8 dark:border-stone-800 dark:bg-stone-900 dark:shadow-none">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-stone-500 dark:text-stone-400">
             {t("overviewLabel")}
           </p>

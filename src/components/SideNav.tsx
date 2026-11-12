@@ -72,7 +72,7 @@ export const SideNav = () => {
   };
 
   return (
-    <aside className="hidden lg:block">
+    <aside className="hidden bg-stone-50 lg:block dark:bg-transparent">
       <div className="sticky top-0 flex h-screen flex-col px-6 py-10">
         <a href="#hero" onClick={(event) => handleNavClick(event, "hero")} className="text-lg font-semibold tracking-tight">
           {t("brandPart1")}
@@ -93,7 +93,7 @@ export const SideNav = () => {
                     aria-current={isActive ? "true" : undefined}
                     className={`flex items-baseline gap-3 rounded-md px-2 py-1.5 font-mono text-xs transition-colors ${
                       isActive
-                        ? "bg-amber-800/10 text-amber-900 dark:bg-amber-400/10 dark:text-amber-300"
+                        ? "bg-white text-stone-950 shadow-sm dark:bg-amber-400/10 dark:text-amber-300 dark:shadow-none"
                         : "text-stone-500 hover:text-stone-950 dark:hover:text-stone-100"
                     }`}
                   >

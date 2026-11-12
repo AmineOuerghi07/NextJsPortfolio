@@ -15,7 +15,7 @@ export const Expertise = () => {
             <h3 className="text-base font-semibold text-stone-950 dark:text-stone-50">
               {t(`expertiseAreas.${id}.title`)}
             </h3>
-            <p className="text-sm leading-relaxed text-stone-600 sm:text-base dark:text-stone-300">
+            <p className="text-sm leading-relaxed text-stone-700 sm:text-base dark:text-stone-300">
               {t(`expertiseAreas.${id}.description`)}
             </p>
           </li>

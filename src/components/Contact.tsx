@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const fieldClass =
-  "w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-stone-900 outline-none transition-colors placeholder:text-stone-400 focus:border-amber-700 focus:ring-2 focus:ring-amber-700/20 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-100 dark:focus:border-amber-400 dark:focus:ring-amber-400/20";
+  "w-full rounded-xl border border-stone-300 bg-stone-50 px-4 py-3 text-stone-900 outline-none transition-colors placeholder:text-stone-400 focus:border-stone-950 focus:bg-white focus:ring-2 focus:ring-stone-950/10 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-100 dark:focus:border-amber-400 dark:focus:bg-stone-900 dark:focus:ring-amber-400/20";
 
 export const Contact = () => {
   const t = useTranslations("Contact");
@@ -131,7 +131,7 @@ export const Contact = () => {
             />
             <button
               type="submit"
-              className="w-full rounded-full bg-amber-800 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-amber-900 dark:bg-amber-500 dark:text-stone-950 dark:hover:bg-amber-400"
+              className="w-full rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-stone-800 dark:bg-amber-500 dark:text-stone-950 dark:hover:bg-amber-400"
             >
               {t("formSubmit")}
             </button>
