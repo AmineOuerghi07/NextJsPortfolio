@@ -1,16 +1,17 @@
 {
-
   "Header": {
     "brandPart1": "Amine",
     "brandPart2": "Ouerghi",
     "navLinks": {
       "about": "À propos",
       "projects": "Projets",
+      "skills": "Compétences",
       "experience": "Expérience",
       "contact": "Contact"
     },
     "themeToggleAria": "Basculer le thème",
     "menuToggleAria": "Basculer le menu",
+    "sectionNavAria": "Sections",
     "languageSwitchAria": "Changer de langue",
     "languages": {
       "english": "Anglais",
@@ -18,146 +19,199 @@
       "arabic": "Arabe"
     }
   },
-
   "Hero": {
-    "tag": "Ouvert aux stages et opportunités juniors",
-    "titlePart1": "Étudiant en Génie Informatique &",
-    "titlePart2": "Développeur Full-Stack",
-    "description": "Passionné par la création de solutions numériques intelligentes et efficaces. Compétent à la fois en frontend et backend, notamment avec {react}, {flutter}, {nestjs}, {dotnet}, {springboot}, {mongodb} et {sqlserver}. En tant qu’étudiant curieux et développeur en devenir, je réalise régulièrement de nouveaux projets — plusieurs sont disponibles sur mon GitHub.",
-    "viewProjects": "Voir les Projets",
-    "getInTouch": "Entrer en Contact",
+    "tag": "Ouvert aux postes backend et full-stack à distance",
+    "name": "Mohamed Amine Ouerghi",
+    "title": "Ingénieur logiciel",
+    "description": "Je conçois des API REST, des traitements en arrière-plan et des applications multiplateformes avec NestJS, .NET, MongoDB et Angular. J’ai mené SeekMake One de l’API jusqu’à trois publications sur l’App Store.",
+    "nowLabel": "Auparavant",
+    "now": "chez SeekMake, sur les API et l’application SeekMake One.",
+    "viewProjects": "Voir les projets",
+    "getInTouch": "Me contacter",
     "socialLinks": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "email": "Email"
+      "email": "E-mail"
     },
-    "carrerHighlight": "Carrière",
-    "statCards": {
-      "projectsCompleted": "Projets Réalisés",
-      "internships": "Stages",
-      "techStacksMastered": "Technologies Maîtrisées",
-      "passionForLearning": "Passion pour l'Apprentissage"
+    "overviewLabel": "Aperçu",
+    "overview": "Ingénieur orienté backend, à Tunis, ouvert aux postes à distance. Le dernier poste était chez SeekMake : services NestJS, traitements asynchrones et l’application SeekMake One.",
+    "overviewPoints": {
+      "0": { "label": "Basé", "value": "Tunis, à distance" },
+      "1": { "label": "Dernier poste", "value": "Ingénieur logiciel, SeekMake, 2026" },
+      "2": { "label": "Formation", "value": "Génie logiciel, ESPRIT" }
     }
   },
-
   "Skills": {
-    "title": "Compétences Techniques",
+    "label": "Compétences",
+    "title": "Compétences techniques",
     "skillCategories": {
-      "0": {
-        "category": "Backend & DevOps"
-      },
-      "1": {
-        "category": "Développement Web"
-      },
-      "2": {
-        "category": "Développement Mobile"
-      },
-      "3": {
-        "category": "Logiciels & Systèmes"
-      }
+      "0": { "category": "Langages de programmation" },
+      "1": { "category": "Backend" },
+      "2": { "category": "Web et mobile" },
+      "3": { "category": "Données et livraison" }
     }
   },
-
   "FeaturedProjects": {
-    "title": "Projets Phares",
-    "subtitle": "Mise en avant de solutions innovantes qui génèrent des résultats concrets pour les entreprises",
+    "label": "Travaux",
+    "title": "Projets choisis",
+    "subtitle": "Du produit en production et des dépôts publics, avec le résultat avant la pile technique.",
+    "links": {
+      "product": "seekmake.com",
+      "appStore": "App Store",
+      "github": "GitHub",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "web": "Web"
+    },
     "projects": {
       "0": {
-        "title": "SmartFarming",
-        "description": "Une solution agricole intelligente basée sur l'IoT permettant un suivi en temps réel, un arrosage intelligent et une visualisation des données via des tableaux de bord Power BI, avec des microservices Dockerisés pour une évolutivité.",
-        "metric0": "Architecture de Microservices",
-        "metric1": "Suivi en Temps Réel",
-        "metric2": "Perspectives IA"
+        "kicker": "SeekMake",
+        "title": "Plateforme et SeekMake One",
+        "description": "Travail backend et mobile sur un produit en ligne : quatre services NestJS, des files d’attente, du cache, et une application Capacitor publiée trois fois sur l’App Store.",
+        "metric0": "Bundle de micro-frontend de 7 Mo à 500 Ko",
+        "metric1": "Bundle de micro-frontend de 7 Mo à 500 Ko",
+        "metric2": "Plus de 8 000 impressions et plus de 200 téléchargements organiques"
       },
       "1": {
-        "title": "Recetta AI",
-        "description": "Une application mobile qui utilise l'IA pour suggérer des recettes en fonction des ingrédients scannés ou des images alimentaires, offrant des recommandations culinaires dynamiques et intelligentes.",
-        "metric0": "Recettes Alimentées par l'IA",
-        "metric1": "Détection Intelligente des Ingrédients",
-        "metric2": "Expérience Utilisateur Fluide"
+        "kicker": "C++",
+        "title": "FunEngine",
+        "description": "Un moteur 2D et 3D écrit depuis zéro, avec un rendu OpenGL, des shaders GLSL, un éditeur ImGui et un système entité-composant orienté données.",
+        "metric0": "Plus de 160 000 entités 2D à 60 IPS",
+        "metric1": "Build multiplateforme avec Premake",
+        "metric2": "Éditeur de scène ImGui"
       },
       "2": {
-        "title": "E-Learning",
-        "description": "Une plateforme éducative basée sur Flutter intégrée avec Firebase pour l'authentification, le stockage de fichiers et la gestion des utilisateurs — conçue pour améliorer les expériences d'apprentissage à distance.",
-        "metric0": "Authentification Firebase",
-        "metric1": "Stockage Cloud",
-        "metric2": "Interface Réactive"
+        "kicker": "IoT",
+        "title": "Smart Farming",
+        "description": "Un système IoT universitaire : microservices NestJS, application Flutter pour l’irrigation et la détection de maladies, et tableau de bord React.",
+        "metric0": "Kubernetes, Prometheus et Grafana",
+        "metric1": "Irrigation MQTT et diagnostic de feuilles par IA",
+        "metric2": "Mobile, web et backend dans des dépôts séparés"
       },
       "3": {
-        "title": "3DMuseum",
-        "description": "Un musée 3D interactif développé avec Unity, offrant un environnement virtuel immersif où les utilisateurs peuvent explorer des expositions d'art numérique et des modèles 3D.",
-        "metric0": "Interaction 3D",
-        "metric1": "Design Immersif",
-        "metric2": "Construction Multiplateforme"
-      }
-    }
-  },
-
-  "Expertise": {
-    "title": "Mon Expertise",
-    "quote": "Parfois, la meilleure façon de résoudre un problème est d'aider les autres. - Oncle Iroh",
-    "expertiseAreas": {
-      "0": {
-        "title": "Développement Backend & API",
-        "description": "Conception et implémentation d'API sécurisées et évolutives avec NestJS et .NET, utilisant l'architecture Clean, CQRS, et des tests unitaires pour une haute maintenabilité."
-      },
-      "1": {
-        "title": "Développement Mobile",
-        "description": "Applications mobiles multiplateformes construites avec Flutter et la gestion d'état avec Provider et BLoC, offrant des expériences utilisateur fluides et réactives."
-      },
-      "2": {
-        "title": "Développement Web",
-        "description": "Développement d'interfaces web dynamiques et modernes avec React et Next.js, garantissant des performances élevées et une accessibilité sur tous les appareils."
-      },
-      "3": {
-        "title": "Ingénierie Logicielle & Graphismes",
-        "description": "Expérience avec C++ et OpenGL pour construire des éditeurs graphiques interactifs utilisant ECS (EnTT) et ImGUI pour des workflows de conception modulaires et visuels."
+        "kicker": ".NET",
+        "title": "API d’authentification sécurisée",
+        "description": "Une API d’authentification en cinq couches Clean Architecture, avec CQRS, rotation JWT et MFA Google Authenticator, couverte par xUnit.",
+        "metric0": "Rotation des jetons d’accès et de rafraîchissement",
+        "metric1": "Sessions par appareil et hachage BCrypt",
+        "metric2": "MediatR et FluentValidation"
       },
       "4": {
-        "title": "DevOps & Infrastructure Cloud",
-        "description": "Conteneurisation et orchestration avec Docker et Kubernetes, suivi avec Prometheus et Grafana, et déploiement d'architectures de microservices."
+        "kicker": "NestJS",
+        "title": "Recetta",
+        "description": "Un backend de recettes qui transforme la photo d’ingrédients ou d’un plat en suggestions via l’API Gemini, avec JWT et MongoDB.",
+        "metric0": "Scan d’ingrédients et de plats",
+        "metric1": "Gestion des recettes et authentification",
+        "metric2": "Branche pour générer les images de recettes"
+      }
+    },
+    "earlierLabel": "Travaux précédents",
+    "earlier": {
+      "0": {
+        "title": "Application e-learning",
+        "description": "Flutter et Firebase, pour apprendre l’authentification, le stockage et l’interface mobile."
+      },
+      "1": {
+        "title": "Musée 3D",
+        "description": "Un musée Unity pour parcourir des expositions numériques."
       }
     }
   },
-
-  "Experience": {
-    "title": "Expérience Professionnelle",
-    "jobs": {
+  "Expertise": {
+    "label": "Domaine",
+    "title": "Ce sur quoi je travaille",
+    "expertiseAreas": {
       "0": {
-        "title": "Stagiaire Développeur Full-Stack",
-        "description": "Développé une application mobile multiplateforme utilisant Flutter et un backend .NET MVC. Axé sur la création d'interfaces utilisateur fluides et réactives, intégré une authentification sécurisée basée sur JWT, et mis en œuvre des tests unitaires pour renforcer la qualité du code."
+        "title": "API et traitements asynchrones",
+        "description": "Services NestJS et .NET avec MongoDB, Redis et BullMQ. Clean Architecture et CQRS quand le domaine a besoin d’une frontière nette."
       },
       "1": {
-        "title": "Développeur Logiciel (Temps Partiel)",
-        "description": "Conçu un éditeur graphique basé sur C++ et OpenGL, similaire à un moteur de jeu léger. Implémenté une architecture Entity-Component-System (ECS) avec la bibliothèque EnTT et développé l'interface utilisateur avec ImGUI pour une édition modulaire de scènes."
+        "title": "Performance",
+        "description": "Poids des bundles et comportement à l’exécution, mesurés avec k6, Grafana, Azure Application Insights et Lighthouse. Index, cache, découpage du code et compression."
       },
       "2": {
-        "title": "Stagiaire Développeur Backend",
-        "description": "Conçu et implémenté un système backend utilisant .NET avec l'architecture Clean et le pattern CQRS via MediatR. Développé des tests unitaires avec xUnit pour garantir la fiabilité et la maintenabilité des services principaux."
+        "title": "Livraison multiplateforme",
+        "description": "Applications Angular et Capacitor menées du design d’API jusqu’à l’App Store, et clients Flutter issus de travaux précédents."
       },
       "3": {
-        "title": "Stagiaire Développeur Mobile",
-        "description": "Démarré mon parcours en développement Flutter en apprenant les bases du framework et en construisant des interfaces mobiles avec des widgets Stateful et Stateless. Intégré Firebase pour l'authentification et les téléchargements de fichiers."
+        "title": "Tests et livraison",
+        "description": "Jest, Playwright et xUnit, avec des pipelines GitHub Actions qui incluent des builds iOS pour les développeurs sans Mac."
+      }
+    }
+  },
+  "Experience": {
+    "label": "Expérience",
+    "title": "Expérience professionnelle",
+    "educationLabel": "Formation",
+    "education": "Diplôme d’ingénieur en génie logiciel, ESPRIT, Ariana — 2026",
+    "jobs": {
+      "0": {
+        "title": "Ingénieur logiciel",
+        "location": "À distance",
+        "period": "07/2026 — 2026",
+        "bullets": {
+          "0": "J’ai maintenu et étendu quatre services NestJS et MongoDB, avec des files BullMQ et Redis, des notifications en temps réel et l’authentification.",
+          "1": "J’ai livré un service de contenu social configurable, basé sur le RAG et des bots de personas planifiés, pour que le fil ne soit pas vide pour les nouveaux utilisateurs.",
+          "2": "J’ai réduit un bundle de micro-frontend de 7 Mo à 500 Ko et ramené le chargement sans cache sous deux secondes.",
+          "3": "J’ai porté la couverture Jest et Playwright au-dessus de 90 % et ajouté un pipeline GitHub Actions qui lance les builds iOS sans Mac."
+        }
+      },
+      "1": {
+        "title": "Stagiaire en ingénierie logicielle",
+        "location": "À distance",
+        "period": "01/2026 — 06/2026",
+        "bullets": {
+          "0": "J’ai construit SeekMake One seul, de l’API REST jusqu’à trois publications sur l’App Store, avec Angular, Capacitor, NestJS et MongoDB.",
+          "1": "La sortie a atteint plus de 8 000 impressions et plus de 200 téléchargements organiques."
+        }
+      },
+      "2": {
+        "title": "Stagiaire développeur mobile full-stack",
+        "location": "Tunis, Tunisie",
+        "period": "07/2025 — 08/2025",
+        "description": "Client Flutter avec BLoC, API .NET avec JWT et jetons de rafraîchissement, tests unitaires et éditeur visuel Flame."
+      },
+      "3": {
+        "title": "Développeur logiciel, temps partiel",
+        "location": "Tunis, Tunisie",
+        "period": "09/2024 — 03/2025",
+        "description": "Éditeur C++ et OpenGL avec un système entité-composant EnTT et une interface ImGui."
+      },
+      "4": {
+        "title": "Stagiaire développeur mobile full-stack",
+        "location": "Tunis, Tunisie",
+        "period": "06/2024 — 08/2024",
+        "description": "Application Flutter avec Provider et backend .NET en Clean Architecture, CQRS, JWT et tests unitaires."
+      },
+      "5": {
+        "title": "Stagiaire développeur mobile",
+        "location": "Tunis, Tunisie",
+        "period": "07/2023 — 08/2023",
+        "description": "Premiers écrans Flutter, avec authentification Firebase et envoi de fichiers."
       }
     }
   },
   "Contact": {
-    "title": "Travaillons Ensemble",
-    "subtitle": "Disponible pour des opportunités de freelance sélectionnées. Un projet excitant ?",
-    "email": "Email",
+    "label": "Contact",
+    "title": "Travaillons ensemble",
+    "subtitle": "Ouvert aux postes backend et full-stack à distance.",
+    "email": "E-mail",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "responseTime": "Temps de Réponse",
-    "responseMessage": "Je réponds généralement dans les 24 heures",
-    "formName": "Votre Nom",
-    "formEmail": "Votre Email",
-    "formMessage": "Votre Message",
-    "formSubmit": "Envoyer le Message",
-    "thankYouMessage": "Merci de m'avoir contacté ! Je vous répondrai bientôt."
+    "responseTime": "Délai de réponse",
+    "responseMessage": "Je réponds en général sous 24 heures",
+    "formName": "Votre nom",
+    "formEmail": "Votre e-mail",
+    "formMessage": "Votre message",
+    "formSubmit": "Envoyer",
+    "thankYouMessage": "Merci pour votre message. Je vous réponds bientôt.",
+    "fillAllFields": "Veuillez remplir tous les champs.",
+    "sending": "Envoi du message...",
+    "sendError": "Une erreur s’est produite. Veuillez réessayer.",
+    "sendFailed": "Échec de l’envoi. Vérifiez votre connexion."
   },
-
   "Footer": {
-    "copyright": "© Mohamed Amine Ouerghi. Tous droits réservés.",
+    "copyright": "Mohamed Amine Ouerghi. Tous droits réservés.",
     "builtWith": "Construit avec Next.js, React et Tailwind CSS"
   }
 }

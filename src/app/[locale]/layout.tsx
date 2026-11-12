@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 import { routing } from "@/i18n/routing";
@@ -6,11 +7,48 @@ import { LocaleProvider } from "@/components/LocalProvider";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { Toaster } from "react-hot-toast";
 
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+  display: "swap",
+});
 
-export const metadata: Metadata = {
-  title: "Med Amine Portfolio",
-  description: "Portfolio of a student Med Amine, a Full-Stack Developer specializing in React, Node.js, and cloud technologies.",
-};
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+  display: "swap",
+});
+
+const metadataCopy = {
+  en: {
+    title: "Mohamed Amine Ouerghi · Software Engineer",
+    description:
+      "Software engineer building REST APIs, background jobs, and cross-platform apps with NestJS, .NET, MongoDB, and Angular.",
+  },
+  fr: {
+    title: "Mohamed Amine Ouerghi · Ingénieur logiciel",
+    description:
+      "Ingénieur logiciel. API REST, traitements en arrière-plan et applications multiplateformes avec NestJS, .NET, MongoDB et Angular.",
+  },
+  ar: {
+    title: "Mohamed Amine Ouerghi · مهندس برمجيات",
+    description:
+      "مهندس برمجيات يبني واجهات REST ومهام الخلفية وتطبيقات متعددة المنصات باستخدام NestJS و.NET وMongoDB وAngular.",
+  },
+} as const;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const copy = metadataCopy[locale as keyof typeof metadataCopy] ?? metadataCopy.en;
+  return {
+    title: copy.title,
+    description: copy.description,
+  };
+}
 
 
 export default async function RootLayout({
@@ -36,9 +74,13 @@ export default async function RootLayout({
 
 
   return (
-    <html lang={currentLocale.locale} dir={currentLocale.locale === 'ar' ? 'rtl' : 'ltr'} suppressHydrationWarning>
-      
-      <body>
+    <html
+      lang={currentLocale.locale}
+      dir={currentLocale.locale === "ar" ? "rtl" : "ltr"}
+      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="bg-stone-100 text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100">
       <ThemeProvider>
 
       <LocaleProvider initialLocale={currentLocale.locale} initialMessages={messages}>

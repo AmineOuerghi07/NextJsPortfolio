@@ -1,16 +1,17 @@
 {
-  
   "Header": {
     "brandPart1": "Amine",
     "brandPart2": "Ouerghi",
     "navLinks": {
       "about": "About",
       "projects": "Projects",
+      "skills": "Skills",
       "experience": "Experience",
       "contact": "Contact"
     },
     "themeToggleAria": "Toggle theme",
     "menuToggleAria": "Toggle menu",
+    "sectionNavAria": "Sections",
     "languageSwitchAria": "Switch language",
     "languages": {
       "english": "English",
@@ -18,145 +19,199 @@
       "arabic": "Arabic"
     }
   },
-
   "Hero": {
-    "tag": "Open to internship & junior opportunities",
-    "titlePart1": "Computer Engineering Student &",
-    "titlePart2": "Full-Stack Developer",
-    "description": "Passionate about crafting smart and efficient digital solutions. Skilled in both frontend and backend technologies including {react}, {flutter}, {nestjs}, {dotnet}, {springboot}, {mongodb}, and {sqlserver}. As a curious learner and aspiring developer, I’m constantly building new projects — you can explore many of them on my GitHub.",
-    "viewProjects": "View Projects",
-    "getInTouch": "Get in Touch",
+    "tag": "Open to remote backend and full-stack roles",
+    "name": "Mohamed Amine Ouerghi",
+    "title": "Software Engineer",
+    "description": "I design REST APIs, background jobs, and cross-platform apps with NestJS, .NET, MongoDB, and Angular. I took SeekMake One from the API through three App Store releases.",
+    "nowLabel": "Previously",
+    "now": "at SeekMake, on the APIs and the SeekMake One app.",
+    "viewProjects": "View projects",
+    "getInTouch": "Get in touch",
     "socialLinks": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
       "email": "Email"
     },
-    "carrerHighlight": "Career Highlights",
-    "statCards": {
-      "projectsCompleted": "Projects Completed",
-      "internships": "Internships",
-      "techStacksMastered": "Tech Stacks Mastered",
-      "passionForLearning": "Passion for Learning"
+    "overviewLabel": "Overview",
+    "overview": "Backend-focused engineer in Tunis, open to remote roles. The last role was at SeekMake: NestJS services, background jobs, and the SeekMake One app.",
+    "overviewPoints": {
+      "0": { "label": "Based", "value": "Tunis, remote" },
+      "1": { "label": "Last role", "value": "Software engineer, SeekMake, 2026" },
+      "2": { "label": "Education", "value": "Software engineering, ESPRIT" }
     }
   },
   "Skills": {
-    "title": "Technical Skills",
+    "label": "Skills",
+    "title": "Technical skills",
     "skillCategories": {
-      "0": {
-        "category": "Backend & DevOps"
-      },
-      "1": {
-        "category": "Web Development"
-      },
-      "2": {
-        "category": "Mobile Development"
-      },
-      "3": {
-        "category": "Software & Systems"
-      }
+      "0": { "category": "Programming languages" },
+      "1": { "category": "Backend" },
+      "2": { "category": "Web and mobile" },
+      "3": { "category": "Data and delivery" }
     }
   },
-
   "FeaturedProjects": {
-    "title": "Featured Projects",
-    "subtitle": "Showcasing innovative solutions that drive real business results",
+    "label": "Work",
+    "title": "Selected projects",
+    "subtitle": "Product work and public repositories, with the outcome ahead of the stack.",
+    "links": {
+      "product": "seekmake.com",
+      "appStore": "App Store",
+      "github": "GitHub",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "web": "Web"
+    },
     "projects": {
       "0": {
-        "title": "SmartFarming System",
-        "description": "An IoT-based smart agriculture solution enabling real-time monitoring, intelligent irrigation, and data visualization using Power BI dashboards, with Dockerized microservices for scalability.",
-        "metric0": "Microservice Architecture",
-        "metric1": "Real-time Monitoring",
-        "metric2": "AI Insights"
+        "kicker": "SeekMake",
+        "title": "Platform and SeekMake One",
+        "description": "Backend and mobile work on a live product: four NestJS services, queues, caching, and a Capacitor app carried through three App Store releases.",
+        "metric0": "Micro-frontend bundle from 7 MB to 500 KB",
+        "metric1": "Micro-frontend bundle from 7 MB to 500 KB",
+        "metric2": "8,000+ impressions and 200+ organic downloads"
       },
       "1": {
-        "title": "Recetta AI App",
-        "description": "A mobile application that leverages AI to suggest recipes based on scanned ingredients or food images, providing dynamic and intelligent culinary recommendations.",
-        "metric0": "AI-Powered Recipes",
-        "metric1": "Smart Ingredient Detection",
-        "metric2": "Seamless UX"
+        "kicker": "C++",
+        "title": "FunEngine",
+        "description": "A 2D and 3D engine written from scratch, with an OpenGL renderer, custom GLSL shaders, an ImGui editor, and a data-oriented entity-component system.",
+        "metric0": "160,000+ 2D entities at 60 FPS",
+        "metric1": "Cross-platform Premake build",
+        "metric2": "ImGui scene editor"
       },
       "2": {
-        "title": "E-Learning App",
-        "description": "A Flutter-based educational platform integrated with Firebase for authentication, file storage, and user management — designed to enhance remote learning experiences.",
-        "metric0": "Firebase Auth",
-        "metric1": "Cloud Storage",
-        "metric2": "Responsive UI"
+        "kicker": "IoT",
+        "title": "Smart Farming",
+        "description": "An academic IoT system: NestJS microservices, a Flutter app for irrigation and crop disease detection, and a React dashboard.",
+        "metric0": "Kubernetes, Prometheus, and Grafana",
+        "metric1": "MQTT irrigation and AI leaf diagnosis",
+        "metric2": "Mobile, web, and backend in separate repositories"
       },
       "3": {
-        "title": "3DMuseum Experience",
-        "description": "An interactive 3D museum developed with Unity, offering an immersive virtual environment where users can explore digital art exhibits and 3D models.",
-        "metric0": "3D Interaction",
-        "metric1": "Immersive Design",
-        "metric2": "Cross-Platform Build"
-      }
-    }
-  },
-
-  "Expertise": {
-    "title": "My Expertise",
-    "quote": "Sometimes the best way to solve a problem is to help others. - Uncle Iroh",
-    "expertiseAreas": {
-      "0": {
-        "title": "Backend & API Development",
-        "description": "Design and implementation of secure, scalable APIs using NestJS and .NET with Clean Architecture, CQRS, and unit testing for high maintainability."
-      },
-      "1": {
-        "title": "Mobile Development",
-        "description": "Cross-platform mobile applications built with Flutter and state management using Provider and BLoC, delivering fluid and responsive user experiences."
-      },
-      "2": {
-        "title": "Web Development",
-        "description": "Development of dynamic and modern web interfaces with React and Next.js, ensuring high performance and accessibility across devices."
-      },
-      "3": {
-        "title": "Software Engineering & Graphics",
-        "description": "Experience with C++ and OpenGL to build interactive graphical editors using ECS (EnTT) and ImGUI for modular and visual design workflows."
+        "kicker": ".NET",
+        "title": "Secure authentication API",
+        "description": "An authentication API in five Clean Architecture layers, with CQRS, JWT rotation, and Google Authenticator MFA, covered by xUnit.",
+        "metric0": "Access and refresh token rotation",
+        "metric1": "Per-device sessions and BCrypt hashing",
+        "metric2": "MediatR and FluentValidation"
       },
       "4": {
-        "title": "DevOps & Cloud Infrastructure",
-        "description": "Containerization and orchestration with Docker and Kubernetes, monitoring with Prometheus and Grafana, and deployment of microservices architectures."
+        "kicker": "NestJS",
+        "title": "Recetta",
+        "description": "A recipe backend that turns a photo of ingredients or a dish into suggestions through the Gemini API, with JWT auth and MongoDB.",
+        "metric0": "Ingredient and dish scanning",
+        "metric1": "Recipe management and authentication",
+        "metric2": "Hook for generated recipe images"
       }
-    }
-  },
-  
-  "Experience": {
-    "title": "Professional Experience",
-    "jobs": {
+    },
+    "earlierLabel": "Earlier work",
+    "earlier": {
       "0": {
-        "title": "Full-Stack Developer Intern",
-        "description": "Developed a cross-platform mobile application using Flutter and a .NET MVC backend. Focused on creating smooth and reactive UIs, integrated secure JWT-based authentication, and implemented unit tests to strengthen code quality."
+        "title": "E-learning app",
+        "description": "Flutter and Firebase, built to learn auth, storage, and mobile UI."
       },
       "1": {
-        "title": "Software Developer (Part-Time)",
-        "description": "Built a C++ and OpenGL-based graphical editor similar to a lightweight game engine. Implemented an Entity-Component-System (ECS) architecture using the EnTT library and developed the UI with ImGUI for modular scene editing."
-      },
-      "2": {
-        "title": "Backend Developer Intern",
-        "description": "Designed and implemented a backend system using .NET with Clean Architecture and the CQRS pattern through MediatR. Developed unit tests with xUnit to ensure reliability and maintainability of core services."
-      },
-      "3": {
-        "title": "Mobile Developer Intern",
-        "description": "Started my journey in Flutter development by learning the fundamentals of the framework and building mobile interfaces using Stateful and Stateless widgets. Integrated Firebase for authentication and file uploads."
+        "title": "3D museum",
+        "description": "A Unity museum for walking through digital exhibits."
       }
     }
   },
-
+  "Expertise": {
+    "label": "Focus",
+    "title": "What I work on",
+    "expertiseAreas": {
+      "0": {
+        "title": "APIs and background work",
+        "description": "NestJS and .NET services with MongoDB, Redis, and BullMQ. Clean Architecture and CQRS when the domain needs a hard boundary."
+      },
+      "1": {
+        "title": "Performance",
+        "description": "Bundle size and runtime behavior, measured with k6, Grafana, Azure Application Insights, and Lighthouse. Indexes, caching, code splitting, and compression."
+      },
+      "2": {
+        "title": "Cross-platform delivery",
+        "description": "Angular and Capacitor apps taken from API design to the App Store, plus Flutter clients from earlier product work."
+      },
+      "3": {
+        "title": "Testing and delivery",
+        "description": "Jest, Playwright, and xUnit, with GitHub Actions pipelines that include iOS builds for developers who are not on a Mac."
+      }
+    }
+  },
+  "Experience": {
+    "label": "Experience",
+    "title": "Professional experience",
+    "educationLabel": "Education",
+    "education": "Engineering degree in software engineering, ESPRIT, Ariana — 2026",
+    "jobs": {
+      "0": {
+        "title": "Software Engineer",
+        "location": "Remote",
+        "period": "07/2026 — 2026",
+        "bullets": {
+          "0": "Maintained and extended four NestJS and MongoDB services with BullMQ, Redis, real-time notifications, and authentication.",
+          "1": "Shipped a configurable social content service using RAG and scheduled persona bots so the feed was not empty for new users.",
+          "2": "Cut a micro-frontend bundle from 7 MB to 500 KB and brought uncached load under two seconds.",
+          "3": "Took Jest and Playwright coverage above 90% and added a GitHub Actions pipeline that lets non-Mac developers trigger iOS builds."
+        }
+      },
+      "1": {
+        "title": "Software Engineering Intern",
+        "location": "Remote",
+        "period": "01/2026 — 06/2026",
+        "bullets": {
+          "0": "Built SeekMake One alone, from the REST API to three App Store releases, with Angular, Capacitor, NestJS, and MongoDB.",
+          "1": "The release reached 8,000+ impressions and 200+ organic downloads."
+        }
+      },
+      "2": {
+        "title": "Full-Stack Mobile Developer Intern",
+        "location": "Tunis, Tunisia",
+        "period": "07/2025 — 08/2025",
+        "description": "Flutter client with BLoC, a .NET API with JWT and refresh tokens, unit tests, and a Flame visual editor."
+      },
+      "3": {
+        "title": "Software Developer, part-time",
+        "location": "Tunis, Tunisia",
+        "period": "09/2024 — 03/2025",
+        "description": "C++ and OpenGL editor with an EnTT entity-component system and an ImGui interface."
+      },
+      "4": {
+        "title": "Full-Stack Mobile Developer Intern",
+        "location": "Tunis, Tunisia",
+        "period": "06/2024 — 08/2024",
+        "description": "Flutter app with Provider and a .NET backend using Clean Architecture, CQRS, JWT, and unit tests."
+      },
+      "5": {
+        "title": "Mobile Developer Intern",
+        "location": "Tunis, Tunisia",
+        "period": "07/2023 — 08/2023",
+        "description": "First Flutter screens, plus Firebase authentication and file uploads."
+      }
+    }
+  },
   "Contact": {
-    "title": "Let's Work Together",
-    "subtitle": "Available for select freelance opportunities. Have an exciting project?",
+    "label": "Contact",
+    "title": "Let’s work together",
+    "subtitle": "Open to remote backend and full-stack roles.",
     "email": "Email",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "responseTime": "Response Time",
+    "responseTime": "Response time",
     "responseMessage": "I typically respond within 24 hours",
-    "formName": "Your Name",
-    "formEmail": "Your Email",
-    "formMessage": "Your Message",
-    "formSubmit": "Send Message",
-    "thankYouMessage": "Thank you for reaching out! I'll get back to you soon."
+    "formName": "Your name",
+    "formEmail": "Your email",
+    "formMessage": "Your message",
+    "formSubmit": "Send message",
+    "thankYouMessage": "Thank you for reaching out. I’ll get back to you soon.",
+    "fillAllFields": "Please fill in every field.",
+    "sending": "Sending message...",
+    "sendError": "Something went wrong. Please try again.",
+    "sendFailed": "Failed to send the message. Check your connection."
   },
   "Footer": {
-    "copyright": "© Mohamed Amine Ouerghi. All rights reserved.",
+    "copyright": "Mohamed Amine Ouerghi. All rights reserved.",
     "builtWith": "Built with Next.js, React, and Tailwind CSS"
   }
 }

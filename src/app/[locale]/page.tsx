@@ -6,15 +6,16 @@ import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { SideNav } from "@/components/SideNav";
 import { Skills } from "@/components/Skills";
 
-
 export default function Portfolio() {
-
   return (
-      <div className="min-h-screen transition-colors duration-300">
-        <Header />
-        <main className="pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors">
+    <div className="min-h-screen bg-stone-100 text-stone-900 transition-colors duration-300 dark:bg-stone-950 dark:text-stone-100">
+      <Header />
+      <div className="lg:mx-auto lg:grid lg:min-h-screen lg:max-w-[1240px] lg:grid-cols-[240px_minmax(0,1fr)]">
+        <SideNav />
+        <main className="lg:border-s lg:border-stone-200 dark:lg:border-stone-800">
           <Hero />
           <Expertise />
           <FeaturedProjects />
@@ -23,7 +24,7 @@ export default function Portfolio() {
           <Contact />
           <Footer />
         </main>
-  
       </div>
+    </div>
   );
 }
